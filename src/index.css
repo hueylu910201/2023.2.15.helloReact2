@@ -70,6 +70,8 @@ button:focus-visible {
 .divider--light,
 .divider--dark {
       width: 250px;
+      display: flex;
+      justify-content: center;
       border-top: solid 5px;
 }
 
@@ -164,6 +166,29 @@ button:focus-visible {
 
 }
 
+.main-layout{
+   display: grid;
+   min-height: 100vh;
+   grid-template-areas: 
+      'header-layout'
+      'content-layout'
+      'footer-layout'
+   ;
+   grid-template-rows: auto 1fr auto;
+   gap: 1rem;
+}
+
+.header-layout{
+   grid-area: header-layout;
+}
+
+.content-layout{
+   grid-area: content-layout;
+}
+
+.footer-layout{
+   grid-area: footer-layout;
+}
 
 /* Header Style */
 .header {
@@ -172,9 +197,6 @@ button:focus-visible {
    padding-bottom: 5%;
    color: #fff;
    font-size: 0.8rem;
-   display: flex;
-   justify-content: center;
-   align-items: center;
 }
 
 /* @media screen and (min-width: 768px) {

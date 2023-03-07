@@ -4,15 +4,13 @@ import './App.css'
 import Header from './component/Header'
 import Content from './component/Content'
 import Footer from './component/Footer'
+import Home from './page/Pages'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div classNameName="App">
-      <Header/>
-      <Content/>
-      <Footer/>
+      <Home/>
     </div>
   )
 }
