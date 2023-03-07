@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import Header from './component/Header'
-import Content from './component/Content'
-import Footer from './component/Footer'
-import Home from './page/Pages'
+import 'antd/dist/reset.css';
+import Home from './page/Pages';
 
 function App() {
 
