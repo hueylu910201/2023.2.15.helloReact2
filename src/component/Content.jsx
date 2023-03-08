@@ -1,3 +1,5 @@
+import Images from "../json/images.json";
+import ContentItem from "./ContentItem";
 export default function Content() {
     return (
         <div>
@@ -8,54 +10,9 @@ export default function Content() {
                         <hr className="divider--dark" />
                     </div>
                     <div className="row">
-                        <div className="image mt-4 col-sm-6 col-lg-3">
-                            <a href="" className="course__link">
-                                <img src="images/img1.jpg" alt="" className="course__image" />
-                            </a>
-                            <p className="image_title">Place 1</p>
-                        </div>
-                        <div className="image mt-4 col-sm-6 col-lg-3">
-                            <a href="" className="course__link">
-                                <img src="images/img2.jpg" alt="" className="course__image" />
-                            </a>
-                            <p className="image_title">Place 2</p>
-                        </div>
-                        <div className="image mt-4 col-sm-6 col-lg-3">
-                            <a href="" className="course__link">
-                                <img src="images/img3.jpg" alt="" className="course__image" />
-                            </a>
-                            <p className="image_title">Place 3</p>
-                        </div>
-                        <div className="image mt-4 col-sm-6 col-lg-3">
-                            <a href="" className="course__link">
-                                <img src="images/img4.jpg" alt="" className="course__image" />
-                                <p className="image_title">Place 4</p>
-                            </a>
-                        </div>
-                        <div className="image mt-4 col-sm-6 col-lg-3">
-                            <a href="" className="course__link">
-                                <img src="images/img5.jpg" alt="" className="course__image" />
-                                <p className="image_title">Place 5</p>
-                            </a>
-                        </div>
-                        <div className="image mt-4 col-sm-6 col-lg-3">
-                            <a href="" className="course__link">
-                                <img src="images/img6.jpg" alt="" className="course__image" />
-                                <p className="image_title">Place 6</p>
-                            </a>
-                        </div>
-                        <div className="image mt-4 col-sm-6 col-lg-3">
-                            <a href="" className="course__link">
-                                <img src="images/img7.jpg" alt="" className="course__image" />
-                                <p className="image_title">Place 7</p>
-                            </a>
-                        </div>
-                        <div className="image mt-4 col-sm-6 col-lg-3">
-                            <a href="" className="course__link">
-                                <img src="images/img8.jpg" alt="" className="course__image" />
-                                <p className="image_title">Place 8</p>
-                            </a>
-                        </div>
+                        {Images.map(images=>(
+                            <ContentItem key={images.id} images={images}/>
+                        ))}
                     </div>
                 </div>
             </article>
