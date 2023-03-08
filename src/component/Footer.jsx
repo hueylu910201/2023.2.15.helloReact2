@@ -8,9 +8,9 @@ export default function Footer() {
                             臺北市和平東路二段134號，國立臺北教育大學 數位科技設計學系
                         </h5>
                         <ul className="footer__list col-lg-4">
-                            <li className="footer__item"><a href="" className="footer__link"><i className="fab fa-facebook-f"></i></a></li>
-                            <li className="footer__item"><a href="" className="footer__link"><i className="fab fa-google-plus-g"></i></a></li>
-                            <li className="footer__item"><a href="" className="footer__link"><i className="fab fa-linkedin-in"></i></a></li>
+                            <li className="footer__item"><a href="https://www.youtube.com/watch?v=O91DT1pR1ew" className="footer__link"><i className="fab fa-facebook-f"></i></a></li>
+                            <li className="footer__item"><a href="https://www.youtube.com/watch?v=O91DT1pR1ew" className="footer__link"><i className="fab fa-google-plus-g"></i></a></li>
+                            <li className="footer__item"><a href="https://www.youtube.com/watch?v=O91DT1pR1ew" className="footer__link"><i className="fab fa-linkedin-in"></i></a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 export default function ContentItem({images}){
     return(
         <section
-            className="image mt-4 col-sm-6 col-lg-3"
+            className="image"
             key={images.id}
         >
             <div>

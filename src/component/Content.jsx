@@ -1,5 +1,6 @@
 import Images from "../json/images.json";
 import ContentItem from "./ContentItem";
+import { Row , Col } from "antd";
 export default function Content() {
     return (
         <div>
@@ -9,11 +10,19 @@ export default function Content() {
                         <h1 className="text-center">IMAGES</h1>
                         <hr className="divider--dark" />
                     </div>
-                    <div className="row">
+                    <Row gutter={[32,24]}>
                         {Images.map(images=>(
-                            <ContentItem key={images.id} images={images}/>
+                            <Col
+                                key={images.id} 
+                                sm={{span:24}}
+                                lg={{span:12}}
+                                xl={{span:6}}
+                                xxl={{span:6}}
+                            >
+                                <ContentItem images={images}/>
+                            </Col>                           
                         ))}
-                    </div>
+                    </Row>
                 </div>
             </article>
 
