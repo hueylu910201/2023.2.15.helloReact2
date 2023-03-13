@@ -24,10 +24,7 @@ a:hover {
 }
 
 body {
-  margin: 0;
   display: flex;
-  margin-left: -100px;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -127,27 +124,27 @@ button:focus-visible {
 
 @media (min-width:576px){
    .main-container{
-      width: 540px;
+      width: 100%;
    }
 }
 @media (min-width:768px){
    .main-container{
-      width: 720px;
+      width: 100%;
    }
 }
 @media (min-width:992px){
    .main-container{
-      width: 960px;
+      width: 100%;
    }
 }
 @media (min-width:1200px){
    .main-container{
-      width: 1140px;
+      width: 100%;
    }
 }
 @media (min-width:1600px){
    .main-container{
-      width: 1500px;
+      width: 100%;
    }
 }
 
@@ -199,6 +196,7 @@ button:focus-visible {
 
 .main-layout{
    display: grid;
+   width: 100%;
    min-height: 100vh;
    grid-template-areas: 
       'header-layout'
@@ -210,6 +208,7 @@ button:focus-visible {
 }
 
 .header-layout{
+   width: 100%;
    grid-area: header-layout;
 }
 
@@ -225,6 +224,7 @@ button:focus-visible {
 .header {
    background-color: #00979c;
    height: 35vh;
+   width: 100%;
    padding-bottom: 5%;
    color: #fff;
    font-size: 0.8rem;
