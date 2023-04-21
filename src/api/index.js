@@ -9,6 +9,7 @@ const firebaseConfig = {
   storageBucket: import.meta.env.VITE_FIREBASE_STORGE_BUCKET,
   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
   appId: import.meta.env.VITE_FIREBASE_APPID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENTID,
 };
 
 const app_length = getApps().length > 0;
@@ -29,9 +30,9 @@ export const feedImages = async () => {
     await deleteDoc(doc(db, "image", images.id));
   });
   // ADD NEW DOCS
-  images.forEach(async (image) => {
+  images.forEach(async (images) => {
     const docRef = await doc(imagesCollection);
-    await setDoc(docRef, { ...image, id: docRef.id });
+    await setDoc(docRef, { ...images, id: docRef.id });
   });
 };
 
@@ -39,8 +40,9 @@ export const getImages = async () => {
     const querySnapshot = await getDocs(imagesCollection);
     // Convert query to a json array.
     let result = [];
-    querySnapshot.forEach(async (image) => {
-       await result.push(image.data());
+    querySnapshot.forEach(async (images) => {
+       await result.push(images.data());
     });
-    return result;
+    console.log({ result });
+    return result
  };

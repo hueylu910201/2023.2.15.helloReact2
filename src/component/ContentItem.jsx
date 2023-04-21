@@ -1,16 +1,16 @@
-export default function ContentItem({images}){
+export default function ContentItem({ image }){
     return(
         <section
             className="image"
-            key={images.id}
+            key={image.id}
         >
             <div>
                 <a href="" className="course__link">
                     <img className="course__image"
-                        src={images.image}
-                        alt={images.name} />
+                        src={image.image}
+                        alt={image.name} />
                 </a>
-                <p className="image_title">{images.title}</p>
+                <p className="image_title">{image.title}</p>
             </div>
         </section>
     );
